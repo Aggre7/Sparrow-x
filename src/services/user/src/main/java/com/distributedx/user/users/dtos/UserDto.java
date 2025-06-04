@@ -1,10 +1,17 @@
 package com.distributedx.user.users.dtos;
-import com.distributedx.user.users.enums.UserType;
+
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record UserDto(
         UUID id,
-        String name,
-        UserType userType,
-        int age
+        String username,
+        String email,
+        String fullName,
+        String profilePictureUrl,
+        String bio,
+        LocalDateTime memberSince,
+        int followerCount,
+        int followingCount,
+        int postCount
 ) { }
