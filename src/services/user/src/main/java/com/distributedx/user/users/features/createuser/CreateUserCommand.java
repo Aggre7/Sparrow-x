@@ -7,10 +7,11 @@ import com.distributedx.user.users.dtos.UserDto;
 
 public record CreateUserCommand(
         UUID id,
+        String fullName,
         String userName,
         String email,
-        String password,
-        String fullName
+        String password
+
 ) implements ICommand<UserDto>, InternalCommand {
     public CreateUserCommand {
     }
