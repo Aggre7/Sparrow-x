@@ -31,13 +31,13 @@ Pretty much the about section: A practically Distributed Social Media System hav
 
 - Currently building User Service and Building Blocks (Non-Executable Library Module containing Mediator, Keycloak, Grafana etc...)
 
-| Feature              | Domant | In Progress | Completed |
-|----------------------|--------|-------------|-----------|
-| API Gateway          |  ✅      |             |           |
-| Keycloak Service     |        |            |           |
-| Building Blocks      |        |      ✅       |           |
-| User Service         |        |     ✅        |           |
-| Notification Service |   ✅     |             |           |
-| Chat Service         |    ✅    |             |           |
+| Feature              | Dormant | In Progress | Completed |
+|----------------------|---------|-------------|-----------|
+| API Gateway          | ✅       |             |           |
+| Keycloak Service     |         |            |           |
+| Building Blocks      |         |      ✅       |           |
+| User Service         |         |     ✅        |           |
+| Notification Service | ✅       |             |           |
+| Chat Service         | ✅       |             |           |
 
 
