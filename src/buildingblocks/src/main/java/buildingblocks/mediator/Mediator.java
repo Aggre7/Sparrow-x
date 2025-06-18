@@ -3,7 +3,6 @@ package buildingblocks.mediator;
 import buildingblocks.mediator.abstractions.IMediator;
 import buildingblocks.mediator.abstractions.commands.ICommand;
 import buildingblocks.mediator.abstractions.commands.ICommandHandler;
-import buildingblocks.mediator.abstractions.notifications.INotification;
 import buildingblocks.mediator.abstractions.queries.IQuery;
 import buildingblocks.mediator.abstractions.requests.IPipelineBehavior;
 import buildingblocks.mediator.abstractions.requests.IRequest;
@@ -32,10 +31,6 @@ class Mediator implements IMediator {
         this.applicationContext = applicationContext;
     }
 
-    @Override
-    public <TNotification extends INotification> Void publish(TNotification notification) throws Exception {
-        return null;
-    }
 
     @Override
     public <TResponse> TResponse send(IRequest<TResponse> request) {
@@ -164,4 +159,8 @@ class Mediator implements IMediator {
     }
 
 
+    @Override
+    public <TNotification extends INotification> Void publish(TNotification tNotification) throws Exception {
+        return null;
+    }
 }
