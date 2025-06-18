@@ -10,7 +10,7 @@ import org.springframework.validation.Validator;
 
 import java.util.List;
 
-public class ValidationPipelineBehavior<TRequest extends IRequest<TResponse>, TResponse> implements IPipelineBehavior<TRequest, TResponse> {
+public class ValidationPipelineBehavior<TRequest extends IRequest<TResponse>, TResponse> implements IPipelineBehavior<TRequest, TResponse>{
 
     private final List<Validator> validators;
 
