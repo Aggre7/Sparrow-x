@@ -3,6 +3,7 @@ package buildingblocks.mediator;
 import buildingblocks.mediator.abstractions.IMediator;
 import buildingblocks.mediator.abstractions.commands.ICommand;
 import buildingblocks.mediator.abstractions.commands.ICommandHandler;
+import buildingblocks.mediator.abstractions.notifications.INotification;
 import buildingblocks.mediator.abstractions.queries.IQuery;
 import buildingblocks.mediator.abstractions.requests.IPipelineBehavior;
 import buildingblocks.mediator.abstractions.requests.IRequest;
