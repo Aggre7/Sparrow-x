@@ -37,13 +37,13 @@ public class TransactionPipelineBehavior<TRequest extends IRequest<TResponse>, T
 
                 List<DomainEvent> domainEvents = this.eventDispatcher.getDomainEvents();
 
-                domainEvents.forEach(domainEvent -> {
+                if (!domainEvents.isEmpty()) {
                     this.eventDispatcher.send(domainEvents, request.getClass());
 
                     this.eventDispatcher.clearDomainEvents();
 
                     logger.info("Transaction successfully committed.");
-                });
+                }
 
                 return response;
             } catch (Exception ex) {
