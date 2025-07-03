@@ -1,8 +1,10 @@
 package com.distributedx.user.users.features.createuser;
 
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+@Component
 public class CreateUserCommandValidator implements Validator {
     @Override
     public boolean supports(Class<?> clazz) {
@@ -29,9 +31,6 @@ public class CreateUserCommandValidator implements Validator {
             errors.rejectValue("email", "email.required", "Email is required");
         }
 
-        if (command.password() == null ) {
-            errors.rejectValue("password", "password.required", "Email is required");
-        }
     }
 
 }

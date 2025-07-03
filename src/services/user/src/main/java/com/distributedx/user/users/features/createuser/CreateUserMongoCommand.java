@@ -1,18 +1,16 @@
 package com.distributedx.user.users.features.createuser;
-import java.util.UUID;
+
 import buildingblocks.core.event.InternalCommand;
 import buildingblocks.mediator.abstractions.commands.ICommand;
-import com.distributedx.user.users.dtos.UserDto;
+import buildingblocks.mediator.abstractions.requests.Unit;
 
+import java.util.UUID;
 
-public record CreateUserCommand(
+public record CreateUserMongoCommand(
         UUID id,
         String userName,
         String fullName,
         String email,
-        String password
-) implements ICommand<UserDto>, InternalCommand {
-    public CreateUserCommand {
-    }
+        String password,
+        boolean isDeleted) implements ICommand<Unit>, InternalCommand {
 }
-
