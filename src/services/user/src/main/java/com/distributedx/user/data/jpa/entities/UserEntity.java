@@ -26,29 +26,29 @@ public class UserEntity extends BaseEntity<UUID> {
     @Embedded
     private UserName userName;
     @Embedded
+    private FullName fullName;
+    @Embedded
     private Email email;
     @Embedded
     private Password password;
-    @Embedded
-    @Column(name = "fullname")
-    private FullName fullName;
 
 
 
-    public UserEntity(UUID id, UserName userName, Email email, Password password, FullName fullName) {
+
+    public UserEntity(UUID id, UserName userName, FullName fullName, Email email, Password password) {
         this.id = id;
         this.userName = userName;
+        this.fullName = fullName;
         this.email = email;
         this.password = password;
-        this.fullName = fullName;
     }
 
-    public UserEntity(UUID id, UserName userName, Email email, Password password, FullName fullName, LocalDateTime createdAt, Long createdBy, LocalDateTime lastModified, Long lastModifiedBy, Long version, boolean isDeleted) {
+    public UserEntity(UUID id, UserName userName, FullName fullName, Email email, Password password, LocalDateTime createdAt, Long createdBy, LocalDateTime lastModified, Long lastModifiedBy, Long version, boolean isDeleted) {
         this.id = id;
         this.userName = userName;
+        this.fullName = fullName;
         this.email = email;
         this.password = password;
-        this.fullName = fullName;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.lastModified = lastModified;
