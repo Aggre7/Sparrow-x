@@ -11,7 +11,8 @@ Pretty much the about section: A practically Distributed Social Media System hav
 - 🔹 Using gRPC for internal communication between our microservices.
 - 🔹 Using CQRS implementation with a Mediator library.
 - 🔹 Using Spring Data JPA for data persistence and ORM in write side with Postgres.
-- 🔹 Using Spring Data MongoDB for data persistence and ORM in read side with MongoDB.
+- 🔹 Using Spring Data Cassandra for data persistence and ORM in read side with CassandraDB.
+- 🔹 Using Spring Data Neo4j for graph-based queries, social graph traversal, and recommendation logic.
 - 🔹 Using Inbox Pattern for ensuring message idempotency for receiver and Exactly once Delivery.
 - 🔹 Using Outbox Pattern for ensuring no message is lost and there is at At Least One Delivery.
 - 🔹 Using Unit Testing for testing small units and mocking our dependencies with Mockito.
@@ -23,7 +24,7 @@ Pretty much the about section: A practically Distributed Social Media System hav
 - 🔹 Using Jaeger for Distributed Tracing top of OpenTelemetry Collector.
 - 🔹 Using Prometheus and Grafana for monitoring top of OpenTelemetry Collector.
 - 🔹 Using Keycloak for authentication and authorization based on OpenID-Connect and OAuth2.
-- 🔹 Using Spring Cloud Gateway as a microservices' gateway.
+- 🔹 Using Spring Cloud Gateway MVC as a Microservices' gateway.
 
 
 
@@ -33,11 +34,12 @@ Pretty much the about section: A practically Distributed Social Media System hav
 
 | Feature              | Dormant | In Progress | Completed |
 |----------------------|---------|-------------|-----------|
-| API Gateway          | ✅       |             |           |
-| Keycloak Service     |         |            |           |
+| API Gateway          |        |   ✅          |           |
 | Building Blocks      |         |      ✅       |           |
-| User Service         |         |     ✅        |           |
-| Notification Service | ✅       |             |           |
-| Chat Service         | ✅       |             |           |
+| Fanout Service         |    ✅     |             |           |
+| Profile Service         |        |     ✅        |           |
+| Storage Service         | ✅       |             |           |
+| Timeline Service | ✅       |             |           |
+| Tweet Service | ✅       |             |           |
 
 
