@@ -1,4 +1,4 @@
-package com.distributedx.user.users.dtos;
+package com.sparrowx.profile.dtos;
 
 import java.util.UUID;
 
