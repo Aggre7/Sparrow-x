@@ -1,8 +1,9 @@
-package com.distributedx.user.users.models;
+package com.sparrowx.profile.models;
 
 import buildingblocks.core.model.AggregateRoot;
-import com.distributedx.user.users.valueobjects.*;
-import com.distributedx.user.users.features.createuser.UserCreatedDomainEvent;
+import com.sparrowx.profile.valueobjects.*;
+import com.sparrowx.profile.features.createuser.UserCreatedDomainEvent;
+import com.sparrowx.profile.valueobjects.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
