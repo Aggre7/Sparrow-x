@@ -35,10 +35,11 @@ Pretty much the about section: A practically Distributed Social Media System hav
 | Feature              | Dormant | In Progress | Completed |
 |----------------------|---------|-------------|-----------|
 | API Gateway          |        |   ✅          |           |
-| Building Blocks      |         |      ✅       |           |
+| Building Blocks      |         |            |     ✅       |
 | Fanout Service         |    ✅     |             |           |
 | Profile Service         |        |     ✅        |           |
 | Storage Service         | ✅       |             |           |
+| Search Service | ✅       |             |           |
 | Timeline Service | ✅       |             |           |
 | Tweet Service | ✅       |             |           |
 
