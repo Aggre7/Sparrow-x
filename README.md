@@ -1,5 +1,5 @@
 
-# Distributed-X
+# Sparrow-X
 
 Pretty much the about section: A practically Distributed Social Media System having most large scale production features but distilled down to a minimalist blueprint that is easy for mentors to mentor with.
 
