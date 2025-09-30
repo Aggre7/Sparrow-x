@@ -3,9 +3,9 @@ package buildingblocks.mediator;
 import buildingblocks.core.event.EventDispatcher;
 import buildingblocks.mediator.abstractions.IMediator;
 import buildingblocks.mediator.abstractions.requests.IRequest;
-import buildingblocks.mediator.behaviors.LogPipelineBehavior;
-import buildingblocks.mediator.behaviors.TransactionPipelineBehavior;
-import buildingblocks.mediator.behaviors.ValidationPipelineBehavior;
+import buildingblocks.mediator.behaviors.*;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.opentelemetry.api.trace.Tracer;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -39,6 +39,33 @@ public class MediatorConfiguration {
         return new Mediator(applicationContext);
     }
 
+//    @Bean
+//    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+//    public <TRequest extends IRequest<TResponse>, TResponse>
+//    TracingPipelineBehavior<TRequest, TResponse> tracingPipelineBehavior(Tracer tracer) {
+//        return new TracingPipelineBehavior<>(tracer);
+//    }
+
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public <TRequest extends IRequest<TResponse>, TResponse>
+    InfraMetricsPipelineBehavior<TRequest, TResponse> infraMetricsPipelineBehavior(MeterRegistry meterRegistry) {
+        return new InfraMetricsPipelineBehavior<>(meterRegistry);
+    }
+
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public <TRequest extends IRequest<TResponse>, TResponse>
+    BusinessMetricsPipelineBehavior<TRequest, TResponse> businessMetricsPipelineBehavior(MeterRegistry meterRegistry) {
+        return new BusinessMetricsPipelineBehavior<>(meterRegistry);
+    }
+//    @Bean
+//    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+//    public <TRequest extends IRequest<TResponse>, TResponse>
+//    AuditPipelineBehavior<TRequest, TResponse> auditPipelineBehavior() {
+//        return new AuditPipelineBehavior<>();
+//    }
+
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public <TRequest extends IRequest<TResponse>, TResponse>
@@ -61,4 +88,5 @@ public class MediatorConfiguration {
             EventDispatcher eventDispatcher) {
         return new TransactionPipelineBehavior<>(transactionManager, logger, eventDispatcher);
     }
+
 }

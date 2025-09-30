@@ -43,39 +43,15 @@ public class OtelCollectorConfiguration {
                 .setEndpoint(otelCollectorOptions.getEndpoint())
                 .build();
 
-        // Configure metrics exporter
-        OtlpGrpcMetricExporter metricExporter = OtlpGrpcMetricExporter.builder()
-                .setEndpoint(otelCollectorOptions.getEndpoint())
-                .build();
-
-        // Configure log exporter
-        OtlpGrpcLogRecordExporter logExporter = OtlpGrpcLogRecordExporter.builder()
-                .setEndpoint(otelCollectorOptions.getEndpoint())
-                .build();
-
         // Set up the trace provider
         SdkTracerProvider sdkTracerProvider = SdkTracerProvider.builder()
                 .setResource(resource)
                 .addSpanProcessor(BatchSpanProcessor.builder(spanExporter).build())
                 .build();
 
-        // Set up the meter provider
-        SdkMeterProvider sdkMeterProvider = SdkMeterProvider.builder()
-                .setResource(resource)
-                .registerMetricReader(PeriodicMetricReader.builder(metricExporter).build())
-                .build();
-
-        // Set up the logger provider
-        SdkLoggerProvider sdkLoggerProvider = SdkLoggerProvider.builder()
-                .setResource(resource)
-                .addLogRecordProcessor(BatchLogRecordProcessor.builder(logExporter).build())
-                .build();
-
         // Build the OpenTelemetry instance
         return OpenTelemetrySdk.builder()
                 .setTracerProvider(sdkTracerProvider)
-                .setMeterProvider(sdkMeterProvider)
-                .setLoggerProvider(sdkLoggerProvider)
                 .setPropagators(ContextPropagators.create(W3CTraceContextPropagator.getInstance()))
                 .buildAndRegisterGlobal();
     }

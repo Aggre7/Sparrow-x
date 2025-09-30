@@ -132,4 +132,15 @@ public class ValidationUtils {
             throw new IllegalArgumentException("Date and time cannot be null.");
         }
     }
+
+
+    public static void notBeNullOrEmpty(UUID id, String profileIdIsRequired) {
+        if (id == null || id.equals(new UUID(0L, 0L)))
+            throw new IllegalArgumentException(profileIdIsRequired);
+    }
+
+    public static void notBeNullOrEmpty(String value, String valueIsRequired) {
+        if(value.isBlank())
+            throw new IllegalArgumentException(valueIsRequired);
+    }
 }
