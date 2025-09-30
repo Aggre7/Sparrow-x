@@ -1,4 +1,4 @@
-package com.distributedx.user;
+package com.sparrowx.profile;
 
 import buildingblocks.core.event.EventDispatcherConfiguration;
 import buildingblocks.jpa.JpaConfiguration;
@@ -30,5 +30,5 @@ import org.springframework.context.annotation.Import;
         SwaggerConfiguration.class,
         OtelCollectorConfiguration.class,
 })
-public class UserConfigurations {
+public class ProfileServiceConfigurations {
 }
