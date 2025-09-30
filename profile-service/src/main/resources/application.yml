@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: user
+    name: profile-service
 
   main:
     allow-circular-references: false
@@ -17,7 +17,7 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
-    entity-packages-to-scan: com.distributedx.user
+    entity-packages-to-scan: com.distributedx.profile-service
     hibernate:
       ddl-auto: validate
     properties:
