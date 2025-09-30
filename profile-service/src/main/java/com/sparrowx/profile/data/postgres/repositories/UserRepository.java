@@ -1,7 +1,7 @@
-package com.distributedx.user.data.jpa.repositories;
+package com.sparrowx.profile.data.postgres.repositories;
 
-import com.distributedx.user.data.jpa.entities.UserEntity;
-import com.distributedx.user.users.valueobjects.Email;
+import com.sparrowx.profile.data.postgres.entities.UserEntity;
+import com.sparrowx.profile.valueobjects.Email;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

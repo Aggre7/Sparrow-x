@@ -1,10 +1,10 @@
-package com.distributedx.user.data.jpa.entities;
+package com.sparrowx.profile.data.postgres.entities;
 
 import buildingblocks.core.model.BaseEntity;
-import com.distributedx.user.users.valueobjects.Email;
-import com.distributedx.user.users.valueobjects.FullName;
-import com.distributedx.user.users.valueobjects.Password;
-import com.distributedx.user.users.valueobjects.UserName;
+import com.sparrowx.profile.valueobjects.Email;
+import com.sparrowx.profile.valueobjects.FullName;
+import com.sparrowx.profile.valueobjects.Password;
+import com.sparrowx.profile.valueobjects.UserName;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
