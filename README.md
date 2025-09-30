@@ -1,7 +1,7 @@
 
 # Sparrow-X
 
-Pretty much the about section: A practically Distributed Social Media System having most large scale production features but distilled down to a minimalist blueprint that is easy for mentors to mentor with.
+A distributed systems playground where the main feature is GraphRAG, using graph-structured data from a realistic social network to power LLM queries, insights, and experiments. While the twitter clone is just the substrate inspired by Grok, whose access to over a quarter-billion active user interactions transforms X into a second-generation, directory-like network of human knowledge, Sparrowx distills that idea into an accessible MVP: a place where juniors and product/engineering managers alike can explore how graph-aware AI unlocks new ways of navigating and reasoning over connected data, how to instrument, measure and act on the intelligence hidden inside AI-driven workflows through observability tools.
 
 ## Goals Of This Project
 - 🔹 Using Vertical Slice Architecture for architecture level.
@@ -10,6 +10,7 @@ Pretty much the about section: A practically Distributed Social Media System hav
 - 🔹 Using Spring AMQP on top of Rabbitmq for Event Driven Architecture between our microservices.
 - 🔹 Using gRPC for internal communication between our microservices.
 - 🔹 Using CQRS implementation with a Mediator library.
+- 🔹 Using Spring AI for GraphRAG, enabling hybrid retrieval (graph traversals + vector search) and natural language queries over the social graph --> Supporting multi-hop GraphRAG queries, where the system can traverse multiple edges (e.g., User → Follows → User → Tweets → Hashtags) to generate richer, context-aware answers and recommendations.
 - 🔹 Using Spring Data JPA for data persistence and ORM in write side with Postgres.
 - 🔹 Using Spring Data Cassandra for data persistence and ORM in read side with CassandraDB.
 - 🔹 Using Spring Data Neo4j for graph-based queries, social graph traversal, and recommendation logic.
@@ -29,8 +30,6 @@ Pretty much the about section: A practically Distributed Social Media System hav
 
 
 ## Roadmap
-
-- Currently building User Service and Building Blocks (Non-Executable Library Module containing Mediator, Keycloak, Grafana etc...)
 
 | Feature              | Dormant | In Progress | Completed |
 |----------------------|---------|-------------|-----------|
