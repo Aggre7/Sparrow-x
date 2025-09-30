@@ -1,10 +1,10 @@
-package com.distributedx.user.users.features.createuser;
+package com.sparrowx.profile.features.profile.createprofile;
 
 import buildingblocks.core.event.DomainEvent;
 
 import java.util.UUID;
 
-public record UserCreatedDomainEvent(
+public record ProfileCreatedDomainEvent(
         UUID id,
         String userName,
         String fullName,
