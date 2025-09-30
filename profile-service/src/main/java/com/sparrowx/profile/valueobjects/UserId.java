@@ -1,4 +1,4 @@
-package com.distributedx.user.users.valueobjects;
+package com.sparrowx.profile.valueobjects;
 
 import buildingblocks.utils.validation.ValidationUtils;
 import jakarta.persistence.Embeddable;
@@ -6,21 +6,19 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 
 @Embeddable
 @EqualsAndHashCode
 @NoArgsConstructor // Required by JPA
 @Getter
-public class Password {
-    private String password;
+public class UserId {
+    private UUID userId;
 
-    public Password(String value) {
+    public UserId(UUID value) {
         ValidationUtils.notBeNullOrEmpty(value);
 
-        this.password = value;
+        this.userId = value;
     }
 }
-
-
-
-

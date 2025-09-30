@@ -1,4 +1,4 @@
-package com.distributedx.user.users.valueobjects;
+package com.sparrowx.profile.valueobjects;
 
 import buildingblocks.utils.validation.ValidationUtils;
 import jakarta.persistence.Embeddable;
@@ -6,19 +6,21 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 
 @Embeddable
 @EqualsAndHashCode
 @NoArgsConstructor // Required by JPA
 @Getter
-public class UserId {
-    private UUID userId;
+public class Email {
+    private String email;
 
-    public UserId(UUID value) {
+    public Email(String value) {
         ValidationUtils.notBeNullOrEmpty(value);
+        ValidationUtils.notBeInvalidEmail(value, "Email");
 
-        this.userId = value;
+        this.email = value;
     }
 }
+
+
+

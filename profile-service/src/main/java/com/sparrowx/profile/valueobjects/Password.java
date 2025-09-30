@@ -1,4 +1,4 @@
-package com.distributedx.user.users.valueobjects;
+package com.sparrowx.profile.valueobjects;
 
 import buildingblocks.utils.validation.ValidationUtils;
 import jakarta.persistence.Embeddable;
@@ -11,13 +11,12 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 @NoArgsConstructor // Required by JPA
 @Getter
-public class FullName {
-    private String fullName;
+public class Password {
+    private char[] password;
 
-    public FullName(String value) {
+    public Password(char[] value) {
         ValidationUtils.notBeNullOrEmpty(value);
-
-        this.fullName = value;
+        this.password = value;
     }
 }
 
