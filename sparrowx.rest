@@ -1,6 +1,6 @@
 
 @api-gateway=http://localhost:8081
-@user-api=http://localhost:8082
+@user-api=http://localhost:8083
 @keycloak-api=http://localhost:8085
 
 @contentType = application/json
@@ -27,6 +27,14 @@ grant_type=client_credentials
 ###
 
 
+### ThreadPool Stress Test
+# @name ThreadPool_Stress_Test
+POST http://localhost:8083/test/threadpool?count=50
+accept: application/json
+Content-Type: application/json
+authorization: Bearer {{access_token}}
+
+
 ################################# User API #################################
 
 ###
@@ -46,7 +54,7 @@ authorization: bearer {{access_token}}
 {
   "userName": "john.doe",
   "fullName": "Johneous Doeus",
-  "email": "johndoe@gmail.com",
+  "email": "johndoe1@gmail.com",
   "password": "A93%s/foC1zxMQf-"
 }
 ###
