@@ -33,7 +33,7 @@ A distributed systems playground where the main feature is GraphRAG, using graph
 
 | Feature              | Dormant | In Progress | Completed |
 |----------------------|---------|-------------|-----------|
-| API Gateway          |        |   ✅          |           |
+| API Gateway          |        |             |      ✅     |
 | Building Blocks      |         |            |     ✅       |
 | Fanout Service         |    ✅     |             |           |
 | Profile Service         |        |     ✅        |           |
