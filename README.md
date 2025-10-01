@@ -21,9 +21,9 @@ A distributed systems playground where the main feature is GraphRAG, using graph
 - 🔹 Using Spring Validator and a Validation Pipeline Behavior on top of Mediator.
 - 🔹 Using Springdoc Openapi for generating OpenAPI documentation in Spring Boot.
 - 🔹 Using OpenTelemetry Collector for collecting Metrics, Tracings, and Structured Logs.
-- 🔹 Using Kibana for Logging top of OpenTelemetry Collector.
-- 🔹 Using Jaeger for Distributed Tracing top of OpenTelemetry Collector.
-- 🔹 Using Prometheus and Grafana for monitoring top of OpenTelemetry Collector.
+- 🔹 Using Loki for Logging.
+- 🔹 Using Tempo for Distributed Tracing.
+- 🔹 Using Prometheus and Grafana for monitoring.
 - 🔹 Using Keycloak for authentication and authorization based on OpenID-Connect and OAuth2.
 - 🔹 Using Spring Cloud Gateway MVC as a Microservices' gateway.
 
